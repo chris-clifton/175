@@ -1,0 +1,24 @@
+<html>
+  <body>
+
+    <p><h1>Code Challenge App</h1></p>
+
+    <p>
+      <ul>
+        <% @folder.each do |file|%>
+          <li>
+            <a href="<%= file %>"><%= file %>
+          </li>
+        <% end %>
+      <ul>
+
+    </p>
+    <p>
+      <% if params[:sort] == "desc" %>
+        <a href="/">Sort Ascending</a>
+      <% else %>
+        <a href="/?sort=desc">Sort Descending</a>
+      <% end %>
+    </p>
+  </body>
+</html>
